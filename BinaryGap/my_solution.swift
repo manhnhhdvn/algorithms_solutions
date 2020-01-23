@@ -3,6 +3,7 @@ import Glibc
 
 // you can write to stdout for debugging purposes, e.g.
 // print("this is a debug message")
+// https://app.codility.com/demo/results/trainingBYC7XN-5VD/
 
 public func solution(_ N : Int) -> Int {
     var result = 0
