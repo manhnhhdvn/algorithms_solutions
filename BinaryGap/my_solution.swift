@@ -1,17 +1,12 @@
 import Foundation
 import Glibc
 
-// you can write to stdout for debugging purposes, e.g.
-// print("this is a debug message")
-// https://app.codility.com/demo/results/trainingBYC7XN-5VD/
-
 public func solution(_ N : Int) -> Int {
     var result = 0
     var tmpResult = 0
     let binaryVal = convertToBinaryString(number: N)
-    let binaryValCount = binaryVal.count
     var currentState = State.waitingStartCount
-    for (index, char) in binaryVal.enumerated() {
+    for char in binaryVal {
         if char == "1" {
             if currentState == State.waitingStartCount {
                 currentState = State.waitingEndCount
@@ -27,7 +22,7 @@ public func solution(_ N : Int) -> Int {
                 tmpResult += 1
             }
         }
-        if char == "1" && currentState == State.waitingStartCount && index < binaryValCount {
+        if char == "1" && currentState == State.waitingStartCount {
             currentState = State.waitingEndCount
         }
     }
