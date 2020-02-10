@@ -1,1 +1,1 @@
-# codility_swift4_solutions
+algorithms solutions
